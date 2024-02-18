@@ -1,11 +1,8 @@
-package kom.apnawallet.myapplication
+package kom.apnawallet.myapplication.util
 
-import com.google.common.truth.Truth.assertThat
 import junit.framework.TestCase.assertEquals
-import kom.apnawallet.myapplication.util.AppUtil
 import kom.apnawallet.myapplication.util.AppUtil.formatTime
 import org.junit.Test
-import java.time.Instant
 
 class AppUtilTest {
 

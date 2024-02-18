@@ -1,16 +1,16 @@
 package kom.apnawallet.myapplication.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
 import android.widget.LinearLayout
+import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
-import kom.apnawallet.myapplication.util.IndicatorPageTransformer
 import kom.apnawallet.myapplication.R
 import kom.apnawallet.myapplication.adapters.ProductSliderAdapter
 import kom.apnawallet.myapplication.databinding.ActivityProductDetailBinding
 import kom.apnawallet.myapplication.model.Product
+import kom.apnawallet.myapplication.util.IndicatorPageTransformer
 
 class ProductDetailActivity : AppCompatActivity() {
 
@@ -86,5 +86,7 @@ class ProductDetailActivity : AppCompatActivity() {
             binding.indicatorLayout.addView(indicator)
         }
     }
+
+
 }
 

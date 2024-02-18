@@ -1,15 +1,12 @@
 package kom.apnawallet.myapplication.ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.LinearLayout
-import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.facebook.shimmer.ShimmerFrameLayout
 import kom.apnawallet.myapplication.R
@@ -22,12 +19,11 @@ import kom.apnawallet.myapplication.repository.ProductRepository
 import kom.apnawallet.myapplication.util.AppUtil.formatTime
 import kom.apnawallet.myapplication.viewModel.MainViewModel
 import kom.apnawallet.myapplication.viewModel.MainViewModelFactory
-import retrofit2.HttpException
-import java.io.IOException
 import java.util.Timer
 import java.util.TimerTask
 
 const val TAG = "MainActivity"
+var isFirstFetch = true
 
 class MainActivity : AppCompatActivity() {
 
@@ -131,6 +127,12 @@ class MainActivity : AppCompatActivity() {
                 handleLoadingState(it)
             }
         }
+
+        mainActivityViewModel.lastRefreshTimeText.observe(this, Observer { timeText ->
+            timeText?.let {
+                binding.timer.text = timeText
+            }
+        })
     }
 
     private fun handleLoadingState(isLoading: Boolean) {
@@ -156,8 +158,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun updateLastRefreshTimeText() {
-        val formattedTime = formatTime(lastRef) // Define a formatting function
-        binding.timer.text = "Last refreshed: $formattedTime"
+        if(!isFirstFetch) {
+            val formattedTime = formatTime(lastRef) // Define a formatting function
+            binding.timer.text = "Last refreshed: $formattedTime"
+            binding.timer.isVisible = true
+        }
     }
 
 }
