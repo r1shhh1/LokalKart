@@ -20,6 +20,6 @@ For a deeper understanding of how everything works, check out the app's codebase
 
 ###  Your Feedback Matters!
 
-We'd love to hear your thoughts on My Awesome App. Tell us what you like, what you think could be improved, and any other ideas you have!
+We'd love to hear your thoughts on Lokal Kart. Tell us what you like, what you think could be improved, and any other ideas you have!
 
-**Ready to start exploring? Download My Awesome App today!**
+**Ready to start exploring? Download LokalKart today!**
