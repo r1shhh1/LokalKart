@@ -1,8 +1,6 @@
 package kom.apnawallet.myapplication.adapters
 
 import android.content.Context
-import android.media.Image
-import android.text.Layout
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +10,8 @@ import androidx.viewpager.widget.PagerAdapter
 import com.bumptech.glide.Glide
 import kom.apnawallet.myapplication.R
 
+
+//Code for the adapter used to populate the Slider Image view in the product detail page
 class ProductSliderAdapter(private val context: Context, private val images: List<String>): PagerAdapter() {
     override fun getCount(): Int {
         return images.size

@@ -1,14 +1,15 @@
 package kom.apnawallet.myapplication.repository
 
 import android.util.Log
-import kom.apnawallet.myapplication.ui.TAG
 import kom.apnawallet.myapplication.model.Product
 import kom.apnawallet.myapplication.networking.ApiService
+import kom.apnawallet.myapplication.ui.TAG
 import retrofit2.HttpException
 import java.io.IOException
 
 class ProductRepository(private val apiService: ApiService) : ProductRepositoryInterface {
 
+    //logic for fetching the product data
     override suspend fun fetchProducts(): List<Product>? {
         try {
             val response = apiService.getProducts()

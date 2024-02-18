@@ -6,6 +6,7 @@ import org.junit.Test
 
 class AppUtilTest {
 
+    //Test to check if the time is formatted properly
     @Test
     fun `format time returned is correct`(){
         // Set a specific timestamp for testing

@@ -75,7 +75,7 @@ class ProductDetailActivity : AppCompatActivity() {
         }
     }
 
-    //adding indicators
+    //adding indicators for the imageSlider view
     private fun addIndicators(size: Int) {
         for (i in 0 until size) {
             val indicator = View(this)

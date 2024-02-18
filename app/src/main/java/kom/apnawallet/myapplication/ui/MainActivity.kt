@@ -82,7 +82,7 @@ class MainActivity : AppCompatActivity() {
             }
         }, 1000, 1000)
 
-        //Timer to schedule refresh
+        //Timer to schedule refresh after 3 mins
         refreshTimer = Timer()
         refreshTimer?.schedule(object: TimerTask() {
             override fun run() {
@@ -108,6 +108,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    //DataObserver logic for viewModel
     private fun setUpObservers() {
         mainActivityViewModel.products.observe(this) { products ->
             products?.let {
@@ -135,6 +136,7 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
+    //handling loading visual effects
     private fun handleLoadingState(isLoading: Boolean) {
         if (isLoading) {
             shimmerFrameLayout.isVisible = true
@@ -147,6 +149,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //logic to fetch data on every refresh
     private fun onSwipeRefresh(){
         fetchProducts()
         binding.swipeRefreshLayout.isRefreshing = false
@@ -157,6 +160,7 @@ class MainActivity : AppCompatActivity() {
         mainActivityViewModel.fetchProducts()
     }
 
+    //logic to update textUi every refresh for timer
     fun updateLastRefreshTimeText() {
         if(!isFirstFetch) {
             val formattedTime = formatTime(lastRef) // Define a formatting function

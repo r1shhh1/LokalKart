@@ -7,6 +7,8 @@ import com.bumptech.glide.Glide
 import kom.apnawallet.myapplication.databinding.ProductItemBinding
 import kom.apnawallet.myapplication.model.Product
 
+
+//logic for the adapter used to populate the ProductList Recycler view
 class ProductsAdapter(
     private val products: List<Product>,
     private val onItemClick: (Product) -> Unit

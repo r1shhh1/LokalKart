@@ -25,7 +25,7 @@ class RetroInstanceTest{
             .build().create(ApiService::class.java)
     }
 
-
+    //Test to check if the data fetching logic works properly
     @Test
     fun testFetchEmptyProducts() = runBlocking {
         // Prepare MockResponse with expected JSON structure

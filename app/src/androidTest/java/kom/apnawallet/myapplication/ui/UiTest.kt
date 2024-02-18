@@ -24,27 +24,31 @@ class UiTest{
     @get:Rule
     val activityScenarioRule = activityScenarioRule<MainActivity>()
 
+
+    //Test to see if Last Refreshed textview updates with every swipe
     @Test
-    fun testLastRefreshFunctionality() {
+    fun testLastRefreshTvFunctionality() {
         Thread.sleep(5000)
 
         onView(withId(R.id.swipeRefreshLayout)).perform(swipeDown())
 
         onView(withId(R.id.timer)).check { view, _ ->
             val newText = (view as TextView).text.toString()
-            assert(newText.startsWith("Last refreshed:"))
+            assert(newText.startsWith("Last refreshed: 0"))
         }
     }
 
+
+    //Test to check if shimmer effect appears with every refresh
     @Test
     fun testRefreshFunctionality() {
         Thread.sleep(5000)
 
         onView(withId(R.id.swipeRefreshLayout)).perform(swipeDown())
-
         onView(withId(R.id.shimmerView)).check(matches(isDisplayed()))
     }
 
+    // Test to check if recycler view populates properly
     @Test
     fun testRecyclerViewPopulation() {
         Thread.sleep(5000)
@@ -57,6 +61,7 @@ class UiTest{
         }
     }
 
+    //Test to check if clicking on particular item opens the product page
     @Test
     fun testRecyclerViewItemClick() {
         Thread.sleep(5000)
@@ -69,6 +74,7 @@ class UiTest{
         onView(withId(R.id.activity_product_detail_layout)).check(matches(isDisplayed()))
     }
 
+    //Test to check if image sliding feature works properly
     @Test
     fun navigateToProductDetailAndCheckSlider() {
         onView(withId(R.id.rvProducts)).perform(

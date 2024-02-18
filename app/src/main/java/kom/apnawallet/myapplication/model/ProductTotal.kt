@@ -2,6 +2,7 @@ package kom.apnawallet.myapplication.model
 
 import java.io.Serializable
 
+//data model of the data being fetched from the endpoint
 data class ProductTotal(
     val products: List<Product>,
     val total: Int,

@@ -27,9 +27,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="11.5dp"
             android:layout_marginStart="40dp"
-            android:text="LOKALKART"
+            android:text="LOKAL KART"
             android:layout_alignParentStart="true"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -67,7 +67,7 @@
         android:textStyle="bold"
         android:textSize="13sp"
         android:layout_marginLeft="10dp"
-        android:textColor="@color/black"
+        style="@style/textView_style"
         android:layout_below="@id/viewPager"/>
 
     <View
@@ -87,7 +87,7 @@
         android:textSize="15sp"
         android:layout_marginTop="13dp"
         android:layout_marginLeft="10dp"
-        android:textColor="@color/black"
+        style="@style/textView_style"
         android:layout_below="@id/pipLine1"/>
 
 <!--    <View-->
@@ -155,7 +155,7 @@
         android:layout_below="@id/ViewMoreTv"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="10dp"
-        android:textColor="@color/black"
+        style="@style/textView_style"
         android:textSize="12sp"
         android:text="View more from Apple"/>
 
@@ -179,7 +179,7 @@
         android:layout_toEndOf="@+id/discount"
         android:layout_marginTop="45dp"
         android:layout_marginLeft="10dp"
-        android:textColor="@color/black"
+        style="@style/textView_style"
         android:textSize="16sp"
         android:textStyle="bold"
         android:text="Rs13,000"/>
@@ -191,7 +191,7 @@
         android:layout_below="@id/price"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="10dp"
-        android:textColor="@color/black"
+        style="@style/textView_style"
         android:textSize="10sp"
         android:text="View more from Apple"/>
 
@@ -202,7 +202,7 @@
         android:layout_below="@id/price"
         android:layout_marginTop="25dp"
         android:layout_marginLeft="10dp"
-        android:textColor="@color/black"
+        style="@style/textView_style"
         android:textSize="12sp"
         android:text="Lorem ipsum dolor"/>
 
@@ -218,7 +218,8 @@
         android:progressTint="@color/yellow"
         android:scaleX="0.3"
         android:scaleY="0.3"
-        android:stepSize="0.5" />
+        android:stepSize="0.5"
+        android:isIndicator="true"/>
 
 
 
