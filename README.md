@@ -1,4 +1,4 @@
-## My Awesome App : Explore Cool Products!
+## Lokal Kart: Explore Cool Products!
 
 This is your guide to navigating My Awesome App, a fantastic tool for discovering and learning about exciting products. Dive in and see what awaits!
 
