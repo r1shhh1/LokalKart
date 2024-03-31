@@ -1,25 +1,8 @@
-## LokalKart: Explore Cool Products!
+[**Watch the Video Demo of the Application**](https://youtu.be/IlqmWLIbduU)
 
-This is your guide to navigating LokalKart, a fantastic tool for discovering and learning about exciting products. Dive in and see what awaits!
+https://github.com/r1shhh1/LokalKart/assets/74286532/b3d6e0ac-f855-4297-8b3d-947d34a43a5c
 
-### ⭐️ Features You'll Love:
-
-- **Dive deeper:** Tap on any product to unlock a dedicated page filled with detailed information and even swipeable images.
-- **Stay updated:** The app automatically refreshes the product list, so you're always seeing the latest offerings.
-
-### ⚙️ Behind the Scenes:
-
-My App uses some pretty cool tools:
-
-- **Connecting to the world:** It talks to an external "database" to fetch product information, keeping you informed.
-- **Remembering updates:** The app keeps track of when you last checked for updates, so you don't see the same things repeatedly.
-
-###  Want to Know More?
-
-For a deeper understanding of how everything works, check out the app's codebase!
-
-###  Your Feedback Matters!
-
-We'd love to hear your thoughts on Lokal Kart. Tell us what you like, what you think could be improved, and any other ideas you have!
-
-**Ready to start exploring? Download LokalKart today!**
+<img src="https://github.com/r1shhh1/LokalKart/assets/74286532/5b6db69f-b6bd-4661-b078-d82d893653f2" width="300" height="650" />
+<img src="https://github.com/r1shhh1/LokalKart/assets/74286532/c1e194b8-1415-4fd4-a147-94a9ba5a6a0c" width="300" height="650" />
+<img src="https://github.com/r1shhh1/LokalKart/assets/74286532/0690fe9e-ebce-41b3-81fe-3f80f0711a6e" width="300" height="650" />
+<img src="https://github.com/r1shhh1/LokalKart/assets/74286532/0179e0ad-b0e5-4c89-8739-321d8bf3ad82" width="300" height="650" />
