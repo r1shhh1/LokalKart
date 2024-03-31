@@ -1,48 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    android:id="@+id/activity_product_detail_layout"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.ProductDetailActivity">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:background="@color/yellow"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:layout_margin="9dp"
-            android:src="@drawable/baseline_dehaze_24" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="11.5dp"
-            android:layout_marginStart="40dp"
-            android:text="LOKAL KART"
-            android:layout_alignParentStart="true"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="30dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="20dp"
-            android:src="@drawable/baseline_shopping_cart_24" />
-
-
-    </RelativeLayout>
+    tools:context=".productList.presentation.fragment.ProductDetailFragment">
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
@@ -90,25 +51,25 @@
         style="@style/textView_style"
         android:layout_below="@id/pipLine1"/>
 
-<!--    <View-->
-<!--        android:id="@+id/pipLine2"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="1dp"-->
-<!--        android:backgroundTint="#B4B4B8"-->
-<!--        android:layout_marginTop="13dp"-->
-<!--        android:background="@android:color/black"-->
-<!--        android:layout_below="@id/catTv"/>-->
+    <!--    <View-->
+    <!--        android:id="@+id/pipLine2"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="1dp"-->
+    <!--        android:backgroundTint="#B4B4B8"-->
+    <!--        android:layout_marginTop="13dp"-->
+    <!--        android:background="@android:color/black"-->
+    <!--        android:layout_below="@id/catTv"/>-->
 
-<!--    <TextView-->
-<!--        android:id="@+id/descTv"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Select Variant"-->
-<!--        android:textSize="15sp"-->
-<!--        android:layout_marginTop="13dp"-->
-<!--        android:layout_marginLeft="10dp"-->
-<!--        android:textColor="@color/black"-->
-<!--        android:layout_below="@id/pipLine2"/>-->
+    <!--    <TextView-->
+    <!--        android:id="@+id/descTv"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Select Variant"-->
+    <!--        android:textSize="15sp"-->
+    <!--        android:layout_marginTop="13dp"-->
+    <!--        android:layout_marginLeft="10dp"-->
+    <!--        android:textColor="@color/black"-->
+    <!--        android:layout_below="@id/pipLine2"/>-->
 
     <View
         android:id="@+id/pipLine3"
@@ -220,7 +181,5 @@
         android:scaleY="0.3"
         android:stepSize="0.5"
         android:isIndicator="true"/>
-
-
 
 </RelativeLayout>

@@ -1,4 +1,4 @@
-package kom.apnawallet.myapplication.adapters
+package kom.apnawallet.myapplication.productList.presentation.adapters
 
 import android.content.Context
 import android.util.Log

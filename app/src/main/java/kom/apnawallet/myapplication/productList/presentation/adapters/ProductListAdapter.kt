@@ -1,28 +1,26 @@
-package kom.apnawallet.myapplication.adapters
+package kom.apnawallet.myapplication.productList.presentation.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import kom.apnawallet.myapplication.databinding.ProductItemBinding
-import kom.apnawallet.myapplication.model.Product
+import kom.apnawallet.myapplication.productList.domain.model.Product
 
 
 //logic for the adapter used to populate the ProductList Recycler view
-class ProductsAdapter(
-    private val products: List<Product>,
-    private val onItemClick: (Product) -> Unit
-):
-    RecyclerView.Adapter<ProductsAdapter.ProductsViewHolder>() {
+class ProductListAdapter():
+    RecyclerView.Adapter<ProductListAdapter.ProductsViewHolder>() {
+
+    private var products: List<Product> = emptyList()
+
+    var onItemClick: ((Product) -> Unit)? = null
 
     inner class ProductsViewHolder(val binding: ProductItemBinding): RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductsViewHolder {
-        return ProductsViewHolder(ProductItemBinding.inflate(
-            LayoutInflater.from(parent.context),
-            parent,
-            false
-        ))
+        val binding = ProductItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return ProductsViewHolder(binding)
     }
 
     override fun getItemCount(): Int {
@@ -42,9 +40,14 @@ class ProductsAdapter(
                 .into(pImage)
 
             root.setOnClickListener{
-                onItemClick(product)
+                onItemClick?.invoke(product)
             }
         }
+    }
+
+    fun setProducts(products: List<Product>){
+        this.products = products
+        notifyDataSetChanged()
     }
 
 }
